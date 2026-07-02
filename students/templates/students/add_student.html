@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Add Student
+{% endblock %}
+
+{% block content %}
+
+<div class="card shadow">
+
+    <div class="card-header bg-primary text-white">
+
+        <h3>{{ title }}</h3>
+
+    </div>
+
+    <div class="card-body">
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    {{ form.name }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                {{ form.email }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Age</label>
+                {{ form.age }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Course</label>
+                {{ form.course }}
+            </div>
+
+            <button type="submit" class="btn btn-success">
+
+                {{ button_text }}
+
+            </button>
+
+            <a href="{% url 'student_list' %}" class="btn btn-secondary">
+
+                Back
+
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}
