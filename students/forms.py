@@ -6,8 +6,9 @@ class StudentForm(forms.ModelForm):
     class Meta:
         model = Student
 
-        fields = ['name', 'email', 'age', 'course']
-
+        #fields = ['name', 'email', 'age', 'course']
+        fields = "__all__"
+        """
         widgets = {
 
             'name': forms.TextInput(
@@ -29,11 +30,10 @@ class StudentForm(forms.ModelForm):
                     'class': 'form-control'
                 }
             ),
-
             'course': forms.TextInput(
                 attrs={
                     'class': 'form-control',
                     'placeholder': 'Enter course'
                 }
             ),
-        }
+        }"""
