@@ -10,15 +10,17 @@ The Student Management System allows users to manage student records efficiently
 
 ---
 
-## ✨ Features
+## Features
 
-* Add new student records
-* View all students
-* View individual student details
-* Update student information
-* Delete student records
-* User-friendly interface
-* Built using Django's MVC (MVT) architecture
+- User Authentication
+- CRUD Operations
+- Search
+- Pagination
+- Image Upload
+- Django Class-Based Views
+- PostgreSQL Database
+- Responsive Bootstrap UI
+- Deployed on Render
 
 ---
 
@@ -121,6 +123,11 @@ http://127.0.0.1:8000/
 * Git & GitHub
 
 ---
+
+## Live Demo
+
+https://studentmanagementsystem-e8m2.onrender.com
+
 
 ## 🔮 Future Improvements
 
