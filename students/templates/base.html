@@ -24,6 +24,7 @@
 
             <a class="navbar-brand" href="{% url 'student_list' %}">
                 Student Management System
+                
             </a>
 
             <div>
@@ -34,6 +35,21 @@
 
                 <a href="{% url 'add_student' %}" class="btn btn-success">
                     Add Student
+                </a>
+                
+
+                <a href="{% url 'logout' %}" class="btn btn-outline-light me-2">
+                 Logout
+                </a>
+                <span style="color: white;">Welcome {{ user.username }}</span>
+                {% else %}
+
+                <a href="{% url 'login' %}" class="btn btn-outline-light me-2">
+                Login
+                </a>
+
+                 <a href="{% url 'register' %}" class="btn btn-outline-light me-2">
+                    Register
                 </a>
                 {% endif %}
 
@@ -60,25 +76,13 @@
 
             {% endif %}
         </div>
-        {% if user.is_authenticated %}
+        
 
-            Welcome {{ user.username }}
+            
 
-            <a href="{% url 'logout' %}">
-                 Logout
-             </a>
+        
 
-        {% else %}
-
-         <a href="{% url 'login' %}">
-         Login
-        </a>
-
-        <a href="{% url 'register' %}">
-          Register
-        </a>
-
-        {% endif %}
+        
 
     </nav>
 
